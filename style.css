@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(images/math-pic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+#sharp{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: aqua;
+    opacity: 0.5;
+    position: absolute;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#con{
+    position: absolute;
+    background-color: navy;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 30px ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus{
+    box-shadow: none;
+    outline: none;
+    transition: 0.1s ease;
+    color: whitesmoke;
+}
+.navbar-toggler:hover{
+    transition: 0.5s ease;
+    background-color: antiquewhite;
+    color: black;
+}
+.nav-link, .nav-link:active{
+    width: 100%;
+    color: whitesmoke !important;
+    transition: 0.1s ease;
+    margin: 5px 0;
+}
+.nav-link:not(:active):hover{
+    background-color: whitesmoke;
+    transition: 0.5s ease;
+    color: black !important;
+}
+
