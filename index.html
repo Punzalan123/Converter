@@ -33,7 +33,7 @@
                               <button class="nav-link" id="time-tab" data-bs-toggle="pill" data-bs-target="#pills-time" type="button" role="tab" aria-controls="pills-time" aria-selected="false">Time</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="area-tab" data-bs-toggle="pill" data-bs-target="#pills-area" type="button" role="tab" aria-controls="pills-area" aria-selected="false">Area</button>
+                              <button class="nav-link" id="len-tab" data-bs-toggle="pill" data-bs-target="#pills-len" type="button" role="tab" aria-controls="pills-len" aria-selected="false">Length</button>
                             </li>
                           </ul>
                       </div>
@@ -43,53 +43,105 @@
                 <!---->
                 
                   
-                  <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-content px-5" id="pills-tabContent">
                     <!-- SPEED START -->
-                    <div class="tab-pane fade show active text-white" id="pills-speed" role="tabpanel" aria-labelledby="speed-tab">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-gauge-high"></i> Speed Conversion</h3>
-                        <form action="#" class="">
-                            <div class="row justify-content-center mb-2" >
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="inp" placeholder="Enter a number" >
-                                </div>
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="answer" placeholder="Result" disabled>
-                                </div>
-                            </div>    
-                            <div class="row justify-content-center mb-3">
-                                <div class="col-6">
-                                    <select name="" id="conversions1" class="form-select">
-                                        <option selected disabled>Speed Unit</option>
-                                        <option>Kilometer/hour (kph)</option>
-                                        <option>Mile/hour (mph)</option>
-                                        <option>Kilometer/second (km/s)</option>
-                                        <option>Inch/second (in/s)</option>
-                                        <option>Mach (Ma)</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-6">
-                                    <select name="" id="conversions2" class="form-select">
-                                        <option selected disabled>Speed Unit</option>
-                                        <option>Kilometer/hour (kph)</option>
-                                        <option>Mile/hour (mph)</option>
-                                        <option>Kilometer/second (km/s)</option>
-                                        <option>Inch/second (in/s)</option>
-                                        <option>Mach (Ma)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="row mt-2 justify-content-center">
-                            <button onclick="convertspeed()" class="btn btn-success w-50 text-white" >Convert</button>
-                        </div> 
+                    <div class="tab-pane fade show active" id="pills-speed" role="tabpanel" aria-labelledby="speed-tab">
+                      <h3 class="text-white mb-4"><i class="fa-solid fa-gauge-high"></i> Speed Conversion</h3>
+                      <form action="#" >
+                          <div class="row justify-content-center mb-2" >
+                              <div class="col-6">
+                                  <input type="number" class="form-control" id="inp" placeholder="Enter a number" >
+                              </div>
+                              <div class="col-6">
+                                  <input type="number" class="form-control" id="answer" placeholder="Result" disabled>
+                              </div>
+                          </div>
+                          <div class="row justify-content-center mb-3">
+                              <div class="col-6">
+                                  <select name="" id="conversions1" class="form-select">
+                                    <option selected disabled>Speed Unit</option>
+                                    <option>Kilometer/hour</option>
+                                    <option>Mile/hour</option>
+                                    <option>Kilometer/second</option>
+                                    <option>Inch/second</option>
+                                    <option>Mach</option>
+                                  </select>
+                              </div>
+                              
+                              <div class="col-6">
+                                  <select name="" id="conversions2" class="form-select">
+                                    <option selected disabled>Speed Unit</option>
+                                    <option>Kilometer/hour</option>
+                                    <option>Mile/hour</option>
+                                    <option>Kilometer/second</option>
+                                    <option>Inch/second</option>
+                                    <option>Mach</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </form>
+                      <div class="row mt-4 justify-content-center">
+                          <button onclick="convertspeed()" class="btn btn-success w-50 text-white" >Convert</button>
+                      </div> 
                     </div>
+
+
                     <!-- SPEED END -->
 
                     <!-- TIME START -->
-                    <div class="tab-pane fade text-white" id="pills-time" role="tabpanel" aria-labelledby="time-tab">
+                    <div class="tab-pane fade" id="pills-time" role="tabpanel" aria-labelledby="time-tab">
                       <h3 class="text-white mb-4"><i class="fa-solid fa-clock"></i> Time Conversion</h3>
-                      <form action="#" class="">
+                      <form action="#" >
+                          <div class="row justify-content-center mb-2" >
+                              <div class="col-6">
+                                  <input type="number" class="form-control" id="timeInput" placeholder="Enter a number" >
+                              </div>
+                              <div class="col-6">
+                                  <input type="number" class="form-control" id="timeAnswer" placeholder="Result" disabled>
+                              </div>
+                          </div>
+                          <div class="row justify-content-center mb-3">
+                              <div class="col-6">
+                                  <select name="" id="timeConversions1" class="form-select">
+                                      <option selected disabled>Time Unit</option>
+                                      <option>Millisecond</option>
+                                      <option>Second</option>
+                                      <option>Minute</option>
+                                      <option>Hour</option>
+                                      <option>Day</option>
+                                      <option>Week</option>
+                                      <option>Month</option>
+                                      <option>Year</option>
+                                  </select>
+                              </div>
+                              
+                              <div class="col-6">
+                                  <select name="" id="timeConversions2" class="form-select">
+                                      <option selected disabled>Time Unit</option>
+                                      <option>Millisecond</option>
+                                      <option>Second</option>
+                                      <option>Minute</option>
+                                      <option>Hour</option>
+                                      <option>Day</option>
+                                      <option>Week</option>
+                                      <option>Month</option>
+                                      <option>Year</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </form>
+                      <div class="row mt-4 justify-content-center">
+                          <button onclick="convertTime()" class="btn btn-success w-50 text-white" >Convert</button>
+                      </div> 
+                    </div>
+                    <!-- TIME END -->
+
+
+                    <!-- LENGTH START -->
+                     
+                    <div class="tab-pane fade text-white" id="pills-len" role="tabpanel" aria-labelledby="len-tab">
+                      <h3 class="text-white mb-4"><i class="fa-solid fa-ruler"></i> Length Conversion</h3>
+                      <form action="#" >
                           <div class="row justify-content-center mb-2" >
                               <div class="col-6">
                                   <input type="number" class="form-control" id="timeInput" placeholder="Enter a number" >
@@ -128,52 +180,13 @@
                               </div>
                           </div>
                       </form>
-                      <div class="row mt-2 justify-content-center">
+                      <div class="row mt-4 justify-content-center">
                           <button onclick="convertTime()" class="btn btn-success w-50 text-white" >Convert</button>
                       </div> 
                     </div>
-                    <!-- TIME END -->
-
-
-                    <!-- AREA START -->
-                    <div class="tab-pane fade text-white" id="pills-area" role="tabpanel" aria-labelledby="area-tab"><h3 class="text-white mb-4"><i class="fa-solid fa-gauge-high"></i> Speed Conversion</h3>
-                      <form action="#" class="">
-                          <div class="row justify-content-center mb-2" >
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="inp" placeholder="Enter a number" >
-                              </div>
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="answer" placeholder="Result" disabled>
-                              </div>
-                          </div>    
-                          <div class="row justify-content-center mb-3">
-                              <div class="col-6">
-                                  <select name="" id="conversions1" class="form-select">
-                                      <option selected disabled>Speed Unit</option>
-                                      <option>Kilometer/hour (kph)</option>
-                                      <option>Mile/hour (mph)</option>
-                                      <option>Kilometer/second (km/s)</option>
-                                      <option>Inch/second (in/s)</option>
-                                      <option>Mach (Ma)</option>
-                                  </select>
-                              </div>
-                              
-                              <div class="col-6">
-                                  <select name="" id="conversions2" class="form-select">
-                                      <option selected disabled>Speed Unit</option>
-                                      <option>Kilometer/hour (kph)</option>
-                                      <option>Mile/hour (mph)</option>
-                                      <option>Kilometer/second (km/s)</option>
-                                      <option>Inch/second (in/s)</option>
-                                      <option>Mach (Ma)</option>
-                                  </select>
-                              </div>
-                          </div>
-                      </form>
-                      <div class="row mt-2 justify-content-center">
-                          <button onclick="convertspeed()" class="btn btn-success w-50 text-white" >Convert</button>
-                      </div> </div>
-                  </div>
+                  
+                    <!-- LENGTH END -->
+                </div>
             </div>
         </div> 
 

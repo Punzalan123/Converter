@@ -29,7 +29,7 @@ body{
 #con{
     position: absolute;
     background-color: navy;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,4 +60,3 @@ body{
     transition: 0.5s ease;
     color: black !important;
 }
-

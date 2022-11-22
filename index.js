@@ -10,67 +10,67 @@ function convertspeed() {
         return x;
     }
     // Kph start
-    if (conv1 == "Kilometer/hour (kph)" && conv2 == "Mile/hour (mph)"){
+    if (conv1 == "Kilometer/hour" && conv2 == "Mile/hour"){
         ans = x * 0.621371111;
-    } else if (conv1 == "Kilometer/hour (kph)" && conv2 == "Kilometer/second (km/s)"){
+    } else if (conv1 == "Kilometer/hour" && conv2 == "Kilometer/second"){
         ans = x / 3600;
-    } else if (conv1 == "Kilometer/hour (kph)" && conv2 == "Inch/second (in/s)"){
+    } else if (conv1 == "Kilometer/hour" && conv2 == "Inch/second"){
         ans = x * 10.9361;
-    } else if (conv1 == "Kilometer/hour (kph)" && conv2 == "Mach (Ma)"){
+    } else if (conv1 == "Kilometer/hour" && conv2 == "Mach"){
         ans = x * 0.000809848;    
-    } else if (conv1 == "Kilometer/hour (kph)" && conv2 == "Kilometer/hour (kph)"){
+    } else if (conv1 == "Kilometer/hour" && conv2 == "Kilometer/hour"){
         alert('Units are same')
     // Kph end    
 
     // Mph start
-    } else if (conv1 == "Mile/hour (mph)" && conv2 == "Kilometer/hour (kph)"){
+    } else if (conv1 == "Mile/hour" && conv2 == "Kilometer/hour"){
         ans = x / 1.609;
-    } else if (conv1 == "Mile/hour (mph)" && conv2 == "Kilometer/second (km/s)"){
+    } else if (conv1 == "Mile/hour" && conv2 == "Kilometer/second"){
         ans = x / 2236.936;
-    } else if (conv1 == "Mile/hour (mph)" && conv2 == "Inch/second (in/s)"){
+    } else if (conv1 == "Mile/hour" && conv2 == "Inch/second"){
         ans = x * 17.6;
-    } else if (conv1 == "Mile/hour (mph)" && conv2 == "Mach (Ma)"){
+    } else if (conv1 == "Mile/hour" && conv2 == "Mach"){
         ans = x * 0.00130332;    
-    } else if (conv1 == "Mile/hour (mph)" && conv2 == "Mile/hour (mph)"){
+    } else if (conv1 == "Mile/hour" && conv2 == "Mile/hour"){
         alert('Units are same');
     // Mph end
 
     // Km/s start 
-    } else if (conv1 == "Kilometer/second (km/s)" && conv2 == "Kilometer/hour (kph)"){
+    } else if (conv1 == "Kilometer/second" && conv2 == "Kilometer/hour"){
         ans = x * 3600;
-    } else if (conv1 == "Kilometer/second (km/s)" && conv2 == "Mile/hour (mph)"){
+    } else if (conv1 == "Kilometer/second" && conv2 == "Mile/hour"){
         ans = x * 2236.936;
-    } else if (conv1 == "Kilometer/second (km/s)" && conv2 == "Inch/second (in/s)"){
+    } else if (conv1 == "Kilometer/second" && conv2 == "Inch/second"){
         ans = x * 39370.079;
-    } else if (conv1 == "Kilometer/second (km/s)" && conv2 == "Mach (Ma)"){
+    } else if (conv1 == "Kilometer/second" && conv2 == "Mach"){
         ans = x * 2.91545;    
-    } else if (conv1 == "Kilometer/second (km/s)" && conv2 == "Kilometer/second (km/s)"){
+    } else if (conv1 == "Kilometer/second" && conv2 == "Kilometer/second"){
         alert('Units are same');
     //Km/s end 
     
     //In/s start 
-    } else if (conv1 == "Inch/second (in/s)" && conv2 == "Kilometer/hour (kph)") {
+    } else if (conv1 == "Inch/second" && conv2 == "Kilometer/hour") {
         ans = x / 10.9361;
-    } else if (conv1 == "Inch/second (in/s)" && conv2 == "Mile/hour (mph)") {
+    } else if (conv1 == "Inch/second" && conv2 == "Mile/hour") {
         ans = x / 17.6;
-    } else if (conv1 == "Inch/second (in/s)" && conv2 == "Kilometer/second (km/s)") {
+    } else if (conv1 == "Inch/second" && conv2 == "Kilometer/second") {
         ans = x / 39370.079;
-    } else if (conv1 == "Inch/second (in/s)" && conv2 == "Mach (Ma)") {
+    } else if (conv1 == "Inch/second" && conv2 == "Mach") {
         ans = x / 13503.9;
-    } else if (conv1 == "Inch/second (in/s)" && conv2 == "Inch/second (in/s)") {
+    } else if (conv1 == "Inch/second" && conv2 == "Inch/second") {
         alert('Units are same');
     //In/s End
 
     //Speed of Sound start
-    } else if (conv1 == "Mach (Ma)" && conv2 == "Kilometer/hour (kph)") {
+    } else if (conv1 == "Mach" && conv2 == "Kilometer/hour") {
         ans = x * 1234.8;
-    } else if (conv1 == "Mach (Ma)" && conv2 == "Mile/hour (mph)") {
+    } else if (conv1 == "Mach" && conv2 == "Mile/hour") {
         ans = x * 767.269;
-    } else if (conv1 == "Mach (Ma)" && conv2 == "Kilometer/second (km/s)") {
+    } else if (conv1 == "Mach" && conv2 == "Kilometer/second") {
         ans = x * 0.343;
-    } else if (conv1 == "Mach (Ma)" && conv2 == "Inch/second (in/s)") {
+    } else if (conv1 == "Mach" && conv2 == "Inch/second") {
         ans = x * 13503.9;
-    } else if (conv1 == "Mach (Ma)" && conv2 == "Mach (Ma)") {
+    } else if (conv1 == "Mach" && conv2 == "Mach") {
         alert('Units are same');    
     //Speed of Sound End
 
