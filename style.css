@@ -15,7 +15,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background-color: aqua;
+    background-image: linear-gradient(to top right, #0014FF, #009EFF, rgb(0, 231, 255));
     opacity: 0.5;
     position: absolute;
 }
@@ -28,7 +28,7 @@ body{
 }
 #con{
     position: absolute;
-    background-color: navy;
+    background-image: linear-gradient(to bottom, #3F0071, #150050 );
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,12 @@ body{
     margin: 5px 0;
 }
 .nav-link:not(:active):hover{
-    background-color: whitesmoke;
+    background-image: linear-gradient(to left, #0014FF, #009EFF);
     transition: 0.5s ease;
-    color: black !important;
+}
+
+.h2{
+    margin: 20px 0;
+    font-style: italic;
+    letter-spacing: 2px;
 }
