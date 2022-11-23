@@ -258,3 +258,210 @@ const convertTime = () => {
     document.getElementById('timeAnswer').value = timeAns;
 
 }
+
+const convertLen = () => {
+    a = document.getElementById('lenConversions1').value;
+    b = document.getElementById('lenConversions2').value;
+    lenInput = document.getElementById('lenInput').value;
+    c = parseFloat(lenInput);
+
+    if (!(c > 0)){
+        alert('Please enter a valid number');
+        return c
+    }else if (a == b && !(a == 'Length Unit' || b == 'Length Unit')){
+        alert('Units are same');
+        return c
+    }
+    
+    // Millimeter Start
+    if(a == 'Millimeter' && b == 'Centimeter'){
+        lenAns = c / 10
+    } else if(a == 'Millimeter' && b == 'Decimeter'){
+        lenAns = c / 100
+    } else if(a == 'Millimeter' && b == 'Meter'){
+        lenAns = c / 1000
+    } else if(a == 'Millimeter' && b == 'Kilometer'){
+        lenAns = c / 1000000
+    } else if(a == 'Millimeter' && b == 'Inch'){
+        lenAns = c / 25.4
+    } else if(a == 'Millimeter' && b == 'Foot'){
+        lenAns = c / 304.8
+    } else if(a == 'Millimeter' && b == 'Yard'){
+        lenAns = c / 914.4
+    } else if(a == 'Millimeter' && b == 'Mile'){
+        lenAns = c / 1609344
+    }
+    // Millimeter End
+
+    // Centimeter Start
+    else if(a == 'Centimeter' && b == 'Millimeter'){
+        lenAns = c * 10
+    } else if(a == 'Centimeter' && b == 'Decimeter'){
+        lenAns = c / 10
+    } else if(a == 'Centimeter' && b == 'Meter'){
+        lenAns = c / 100
+    } else if(a == 'Centimeter' && b == 'Kilometer'){
+        lenAns = c / 100000
+    } else if(a == 'Centimeter' && b == 'Inch'){
+        lenAns = c / 2.54
+    } else if(a == 'Centimeter' && b == 'Foot'){
+        lenAns = c / 30.48
+    } else if(a == 'Centimeter' && b == 'Yard'){
+        lenAns = c / 91.44
+    } else if(a == 'Centimeter' && b == 'Mile'){
+        lenAns = c / 160934.4
+    }
+    // Centimeter End
+
+    // Decimeter Start
+    else if(a == 'Decimeter' && b == 'Millimeter'){
+        lenAns = c * 100
+    } else if(a == 'Decimeter' && b == 'Centimeter'){
+        lenAns = c * 10
+    } else if(a == 'Decimeter' && b == 'Meter'){
+        lenAns = c / 10
+    } else if(a == 'Decimeter' && b == 'Kilometer'){
+        lenAns = c / 10000
+    } else if(a == 'Decimeter' && b == 'Inch'){
+        lenAns = c / 0.254
+    } else if(a == 'Decimeter' && b == 'Foot'){
+        lenAns = c / 3.048
+    } else if(a == 'Decimeter' && b == 'Yard'){
+        lenAns = c / 9.144
+    } else if(a == 'Decimeter' && b == 'Mile'){
+        lenAns = c / 16093.44
+    }
+    // Decimeter End
+
+    // Meter Start
+    else if(a == 'Meter' && b == 'Millimeter'){
+        lenAns = c * 1000
+    } else if(a == 'Meter' && b == 'Centimeter'){
+        lenAns = c * 100
+    } else if(a == 'Meter' && b == 'Decimeter'){
+        lenAns = c * 10
+    } else if(a == 'Meter' && b == 'Kilometer'){
+        lenAns = c * 1000
+    } else if(a == 'Meter' && b == 'Inch'){
+        lenAns = c * 39.37007874
+    } else if(a == 'Meter' && b == 'Foot'){
+        lenAns = c * 3.280839895
+    } else if(a == 'Meter' && b == 'Yard'){
+        lenAns = c * 1.0936132983
+    } else if(a == 'Meter' && b == 'Mile'){
+        lenAns = c / 1609.344
+    }
+    // Meter End
+
+    // Kilometer Start
+    else if(a == 'Kilometer' && b == 'Millimeter'){
+        lenAns = c * 1000000
+    } else if(a == 'Kilometer' && b == 'Centimeter'){
+        lenAns = c * 100000
+    } else if(a == 'Kilometer' && b == 'Decimeter'){
+        lenAns = c * 10000
+    } else if(a == 'Kilometer' && b == 'Meter'){
+        lenAns = c * 1000
+    } else if(a == 'Kilometer' && b == 'Inch'){
+        lenAns = c * 39370.07874
+    } else if(a == 'Kilometer' && b == 'Foot'){
+        lenAns = c * 3280.839895
+    } else if(a == 'Kilometer' && b == 'Yard'){
+        lenAns = c * 1093.6132983
+    } else if(a == 'Kilometer' && b == 'Mile'){
+        lenAns = c / 1.609344
+    }
+    // Kilometer End
+
+    // Inch Start
+    else if(a == 'Inch' && b == 'Millimeter'){
+        lenAns = c * 25.4
+    } else if(a == 'Inch' && b == 'Centimeter'){
+        lenAns = c * 2.54
+    } else if(a == 'Inch' && b == 'Decimeter'){
+        lenAns = c * 0.254
+    } else if(a == 'Inch' && b == 'Meter'){
+        lenAns = c / 39.37007874
+    } else if(a == 'Inch' && b == 'Kilometer'){
+        lenAns = c / 39370.07874
+    } else if(a == 'Inch' && b == 'Foot'){
+        lenAns = c / 12
+    } else if(a == 'Inch' && b == 'Yard'){
+        lenAns = c / 36
+    } else if(a == 'Inch' && b == 'Mile'){
+        lenAns = c / 63360
+    }
+    // Inch End
+
+    // Foot Start
+    else if(a == 'Foot' && b == 'Millimeter'){
+        lenAns = c * 304.8
+    } else if(a == 'Foot' && b == 'Centimeter'){
+        lenAns = c * 30.48
+    } else if(a == 'Foot' && b == 'Decimeter'){
+        lenAns = c * 3.048
+    } else if(a == 'Foot' && b == 'Meter'){
+        lenAns = c * 0.3048
+    } else if(a == 'Foot' && b == 'Kilometer'){
+        lenAns = c / 3280.839895
+    } else if(a == 'Foot' && b == 'Inch'){
+        lenAns = c * 12
+    } else if(a == 'Foot' && b == 'Yard'){
+        lenAns = c / 3
+    } else if(a == 'Foot' && b == 'Mile'){
+        lenAns = c / 5280
+    }
+    // Foot End
+
+    // Yard Start
+    else if(a == 'Yard' && b == 'Millimeter'){
+        lenAns = c * 914.4
+    } else if(a == 'Yard' && b == 'Centimeter'){
+        lenAns = c * 91.44
+    } else if(a == 'Yard' && b == 'Decimeter'){
+        lenAns = c * 9.144
+    } else if(a == 'Yard' && b == 'Meter'){
+        lenAns = c * 0.9144
+    } else if(a == 'Yard' && b == 'Kilometer'){
+        lenAns = c / 1093.6132983
+    } else if(a == 'Yard' && b == 'Inch'){
+        lenAns = c * 36
+    } else if(a == 'Yard' && b == 'Foot'){
+        lenAns = c * 3
+    } else if(a == 'Yard' && b == 'Mile'){
+        lenAns = c / 1760
+    }
+    // Yard End    
+
+    // Mile Start
+    else if(a == 'Mile' && b == 'Millimeter'){
+        lenAns = c * 1609344
+    } else if(a == 'Mile' && b == 'Centimeter'){
+        lenAns = c * 160934.4
+    } else if(a == 'Mile' && b == 'Decimeter'){
+        lenAns = c * 16093.44
+    } else if(a == 'Mile' && b == 'Meter'){
+        lenAns = c * 1609.344
+    } else if(a == 'Mile' && b == 'Kilometer'){
+        lenAns = c * 1.609344
+    } else if(a == 'Mile' && b == 'Inch'){
+        lenAns = c * 63360
+    } else if(a == 'Mile' && b == 'Foot'){
+        lenAns = c * 5280
+    } else if(a == 'Mile' && b == 'Yard'){
+        lenAns = c * 1760
+    }
+    // Mile End    
+
+    // Invalid inputs start
+    else if(a == 'Length Unit' || b == 'Length Unit'){
+        alert('Please input units');
+        return c
+    } else{
+        alert('Invalid Operation');
+        return c
+    }
+    // Invalid inputs end
+
+    document.getElementById('lenAnswer').value = lenAns;
+}
