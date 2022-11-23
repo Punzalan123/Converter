@@ -43,11 +43,13 @@ body{
     outline: none;
     transition: 0.1s ease;
     color: whitesmoke;
+    border: none;
 }
 .navbar-toggler:hover{
     transition: 0.5s ease;
-    background-color: antiquewhite;
-    color: black;
+    background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
+    /* color: black; */
+    border: none;
 }
 .nav-link, .nav-link:active{
     width: 100%;
@@ -55,8 +57,8 @@ body{
     transition: 0.1s ease;
     margin: 5px 0;
 }
-.nav-link:not(:active):hover{
-    background-image: linear-gradient(to left, #0014FF, #009EFF);
+.nav-pills .nav-link:not(:active):hover{
+    background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
     transition: 0.5s ease;
 }
 
@@ -64,4 +66,8 @@ body{
     margin: 20px 0;
     font-style: italic;
     letter-spacing: 2px;
+}
+.nav-pills .nav-link.active{
+    background-image: linear-gradient(to left, rgb(25, 52, 152), rgb(17, 60, 252));
+    transition: 0.1s ease;
 }
