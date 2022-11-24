@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/02c032f7e0.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
     <title>Unit Converter</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
                         <i class="fa-solid fa-bars"></i>
                       </button>
                       <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="w-100 justify-content-evenly navbar-nav nav-pills mb-3 px-5" id="pills-tab" role="tablist">
+                        <ul class="navbar-nav nav-pills mb-3 px-5" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                               <button class="nav-link active" id="speed-tab" data-bs-toggle="pill" data-bs-target="#pills-speed" type="button" role="tab" aria-controls="pills-speed" aria-selected="true">Speed</button>
                             </li>
@@ -81,9 +82,12 @@
                               </div>
                           </div>
                       </form>
-                      <div class="row mt-4 justify-content-center">
-                          <button onclick="convertspeed()" class="btn btn-success w-50 text-white" >Convert</button>
-                      </div> 
+                        <div class="row mt-4 justify-content-end">
+                            <button onclick="clearSpeed()" class="btn btn-danger text-white col-7" >Clear</button>
+                        </div>
+                        <div class="row mt-2 justify-content-end">
+                            <button onclick="convertspeed()" class="btn btn-success text-white col-7" >Convert</button>
+                        </div>
                     </div>
 
 
@@ -131,9 +135,12 @@
                               </div>
                           </div>
                       </form>
-                      <div class="row mt-4 justify-content-center">
-                          <button onclick="convertTime()" class="btn btn-success w-50 text-white" >Convert</button>
-                      </div> 
+                        <div class="row mt-4 justify-content-end">
+                            <button onclick="clearTime()" class="btn btn-danger text-white col-7" >Clear</button>
+                        </div>
+                        <div class="row mt-2 justify-content-end">
+                            <button onclick="convertTime()" class="btn btn-success text-white col-7" >Convert</button>
+                        </div>
                     </div>
                     <!-- TIME END -->
 
@@ -183,9 +190,12 @@
                               </div>
                           </div>
                       </form>
-                      <div class="row mt-4 justify-content-center">
-                          <button onclick="convertLen()" class="btn btn-success w-50 text-white" >Convert</button>
-                      </div> 
+                        <div class="row mt-4 justify-content-end">
+                            <button onclick="clearLen()" class="btn btn-danger text-white col-7" >Clear</button>
+                        </div>
+                        <div class="row mt-2 justify-content-end">
+                            <button onclick="convertLen()" class="btn btn-success text-white col-7" >Convert</button>
+                        </div>
                     </div>
                   
                     <!-- LENGTH END -->

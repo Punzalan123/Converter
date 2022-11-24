@@ -45,6 +45,13 @@ body{
     color: whitesmoke;
     border: none;
 }
+
+.btn, .btn:active, .btn:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 .navbar-toggler:hover{
     transition: 0.5s ease;
     background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
@@ -60,6 +67,8 @@ body{
 .nav-pills .nav-link:not(:active):hover{
     background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
     transition: 0.5s ease;
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .h2{
@@ -68,6 +77,55 @@ body{
     letter-spacing: 2px;
 }
 .nav-pills .nav-link.active{
-    background-image: linear-gradient(to left, rgb(25, 52, 152), rgb(17, 60, 252));
+    background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
     transition: 0.1s ease;
 }
+.nav-link:not(.active){
+    border: solid 1px rgb(17, 60, 252);
+}
+
+.btn:hover{
+    transform: scale(1.02);
+    transition: 0.5s ease;
+}
+
+.nav-item{
+    width: 30%;
+}
+#pills-tab{
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+@media (max-width: 1200px){
+    .nav-item{
+        width: 80%;
+    }   
+}
+
+.btn-danger, .btn-danger:active, .btn-danger:focus{
+    background: transparent;
+    border: 1px solid rgb(207, 10, 10);
+}
+.btn-danger:hover{
+    border: 1px solid transparent;
+    border-right: transparent;
+    background-image: linear-gradient(to right, rgb(237, 41, 57), rgb(124, 10, 2));
+    background-position: center;
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.btn-success{
+    background-image: linear-gradient(to right, #3CB043, #234F1E);
+    transition: 0.1s ease;
+}
+.btn-success:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: 0.5s ease;
+}
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+      }

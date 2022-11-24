@@ -18,25 +18,23 @@ function convertspeed() {
         ans = x * 10.9361;
     } else if (conv1 == "Kilometer/hour" && conv2 == "Mach"){
         ans = x * 0.000809848;    
-    } else if (conv1 == "Kilometer/hour" && conv2 == "Kilometer/hour"){
-        alert('Units are same')
+    }
     // Kph end    
 
     // Mph start
-    } else if (conv1 == "Mile/hour" && conv2 == "Kilometer/hour"){
-        ans = x / 1.609;
+    else if (conv1 == "Mile/hour" && conv2 == "Kilometer/hour"){
+        ans = x * 1.60934;
     } else if (conv1 == "Mile/hour" && conv2 == "Kilometer/second"){
         ans = x / 2236.936;
     } else if (conv1 == "Mile/hour" && conv2 == "Inch/second"){
         ans = x * 17.6;
     } else if (conv1 == "Mile/hour" && conv2 == "Mach"){
         ans = x * 0.00130332;    
-    } else if (conv1 == "Mile/hour" && conv2 == "Mile/hour"){
-        alert('Units are same');
+    }
     // Mph end
 
     // Km/s start 
-    } else if (conv1 == "Kilometer/second" && conv2 == "Kilometer/hour"){
+    else if (conv1 == "Kilometer/second" && conv2 == "Kilometer/hour"){
         ans = x * 3600;
     } else if (conv1 == "Kilometer/second" && conv2 == "Mile/hour"){
         ans = x * 2236.936;
@@ -44,12 +42,11 @@ function convertspeed() {
         ans = x * 39370.079;
     } else if (conv1 == "Kilometer/second" && conv2 == "Mach"){
         ans = x * 2.91545;    
-    } else if (conv1 == "Kilometer/second" && conv2 == "Kilometer/second"){
-        alert('Units are same');
+    } 
     //Km/s end 
     
     //In/s start 
-    } else if (conv1 == "Inch/second" && conv2 == "Kilometer/hour") {
+    else if (conv1 == "Inch/second" && conv2 == "Kilometer/hour") {
         ans = x / 10.9361;
     } else if (conv1 == "Inch/second" && conv2 == "Mile/hour") {
         ans = x / 17.6;
@@ -57,12 +54,11 @@ function convertspeed() {
         ans = x / 39370.079;
     } else if (conv1 == "Inch/second" && conv2 == "Mach") {
         ans = x / 13503.9;
-    } else if (conv1 == "Inch/second" && conv2 == "Inch/second") {
-        alert('Units are same');
+    }
     //In/s End
 
     //Speed of Sound start
-    } else if (conv1 == "Mach" && conv2 == "Kilometer/hour") {
+    else if (conv1 == "Mach" && conv2 == "Kilometer/hour") {
         ans = x * 1234.8;
     } else if (conv1 == "Mach" && conv2 == "Mile/hour") {
         ans = x * 767.269;
@@ -70,15 +66,16 @@ function convertspeed() {
         ans = x * 0.343;
     } else if (conv1 == "Mach" && conv2 == "Inch/second") {
         ans = x * 13503.9;
-    } else if (conv1 == "Mach" && conv2 == "Mach") {
-        alert('Units are same');    
+    }
     //Speed of Sound End
 
     // Invalid inputs
+    else if(conv1 == conv2 && !(conv1 == "Speed Unit" || conv2 == "Speed Unit")) {
+        alert('Units are same')
     } else if (conv1 == "Speed Unit" || conv2 == ""){
-        alert('Please input units');
+        alert('Please input units')
     } else if (conv1 == "" || conv2 == "Speed Unit"){
-        alert('Please input units');
+        alert('Please input units')
     } else {
         alert('Invalid operation')
     }
@@ -86,6 +83,10 @@ function convertspeed() {
     document.getElementById("answer").value = ans;
 }
 
+const clearSpeed = () => {
+    document.getElementById("inp").value = '';
+    document.getElementById("answer").value = ''; 
+}
 
 const convertTime = () => {
     a = document.getElementById('timeConversions1').value;
@@ -167,7 +168,7 @@ const convertTime = () => {
     } else if(a == 'Hour' && b == 'Week'){
         timeAns = c / 168
     } else if(a == 'Hour' && b == 'Month'){
-        timeAns = c / 730
+        timeAns = c / 730.5
     } else if(a == 'Hour' && b == 'Year'){
         timeAns = c / 8766
     }
@@ -259,6 +260,11 @@ const convertTime = () => {
 
 }
 
+const clearTime = () => {
+    document.getElementById("timeInput").value = '';
+    document.getElementById("timeAnswer").value = ''; 
+}
+
 const convertLen = () => {
     a = document.getElementById('lenConversions1').value;
     b = document.getElementById('lenConversions2').value;
@@ -341,7 +347,7 @@ const convertLen = () => {
     } else if(a == 'Meter' && b == 'Decimeter'){
         lenAns = c * 10
     } else if(a == 'Meter' && b == 'Kilometer'){
-        lenAns = c * 1000
+        lenAns = c / 1000
     } else if(a == 'Meter' && b == 'Inch'){
         lenAns = c * 39.37007874
     } else if(a == 'Meter' && b == 'Foot'){
@@ -464,4 +470,8 @@ const convertLen = () => {
     // Invalid inputs end
 
     document.getElementById('lenAnswer').value = lenAns;
+}
+const clearLen = () => {
+    document.getElementById("lenInput").value = '';
+    document.getElementById("lenAnswer").value = ''; 
 }
