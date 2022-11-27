@@ -29,8 +29,8 @@ body{
 #con{
     position: absolute;
     background-image: linear-gradient(to bottom, #3F0071, #150050 );
-    padding-bottom: 30px;
     display: flex;
+    padding: 50px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
@@ -55,7 +55,6 @@ body{
 .navbar-toggler:hover{
     transition: 0.5s ease;
     background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
-    /* color: black; */
     border: none;
 }
 .nav-link, .nav-link:active{
@@ -67,12 +66,10 @@ body{
 .nav-pills .nav-link:not(:active):hover{
     background-image: linear-gradient(to left, rgb(17, 60, 252), rgb(21, 151, 229));
     transition: 0.5s ease;
-    transform: scale(1.02);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .h2{
-    margin: 20px 0;
     font-style: italic;
     letter-spacing: 2px;
 }
@@ -84,13 +81,8 @@ body{
     border: solid 1px rgb(17, 60, 252);
 }
 
-.btn:hover{
-    transform: scale(1.02);
-    transition: 0.5s ease;
-}
-
 .nav-item{
-    width: 30%;
+    width: 16%;
 }
 #pills-tab{
     align-items: center;
@@ -98,10 +90,14 @@ body{
     width: 100%;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1400px){
     .nav-item{
-        width: 80%;
-    }   
+        width: 30%;
+    }
+    #pills-tab{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .btn-danger, .btn-danger:active, .btn-danger:focus{
@@ -113,7 +109,8 @@ body{
     border-right: transparent;
     background-image: linear-gradient(to right, rgb(237, 41, 57), rgb(124, 10, 2));
     background-position: center;
-    transform: scale(1.02);
+    transform: scale(1.03);
+    transition: 0.5s ease;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .btn-success{
@@ -121,9 +118,9 @@ body{
     transition: 0.1s ease;
 }
 .btn-success:hover{
-    transform: scale(1.02);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: 0.5s ease;
+    transform: scale(1.03);
 }
 input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {

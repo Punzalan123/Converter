@@ -19,9 +19,9 @@
     </div>
     
         <div class="container" id="box" >
-            <div class="col-11 col-sm-11 col-md-8 col-lg-6 col-xl-6" id="con">
+            <div class="col-11 col-sm-11 col-md-8 col-lg-7 col-xl-7" id="con">
                 <h2 class="h2 text-white"><i class="fa-solid fa-scale-unbalanced"></i> Unit Converter</h2>
-                <nav class="navbar navbar-expand-xl w-100">
+                <nav class="navbar navbar-expand-xxl w-100">
                     <div class="container-fluid">
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa-solid fa-bars"></i>
@@ -37,7 +37,16 @@
                             <li class="nav-item" role="presentation">
                               <button class="nav-link" id="len-tab" data-bs-toggle="pill" data-bs-target="#pills-len" type="button" role="tab" aria-controls="pills-len" aria-selected="false">Length</button>
                             </li>
-                          </ul>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="Weight-tab" data-bs-toggle="pill" data-bs-target="#pills-Weight" type="button" role="tab" aria-controls="pills-Weight" aria-selected="false">Weight</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="temp-tab" data-bs-toggle="pill" data-bs-target="#pills-temp" type="button" role="tab" aria-controls="pills-temp" aria-selected="false">Temperature</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="area-tab" data-bs-toggle="pill" data-bs-target="#pills-area" type="button" role="tab" aria-controls="pills-area" aria-selected="false">Area</button>
+                            </li>
+                        </ul>
                       </div>
                     </div>
                   </nav>
@@ -45,7 +54,7 @@
                 <!---->
                 
                   
-                  <div class="tab-content px-5" id="pills-tabContent">
+                  <div class="tab-content px-5 col-xl-10 col-lg-11 col-12" id="pills-tabContent">
                     <!-- SPEED START -->
                     <div class="tab-pane fade show active" id="pills-speed" role="tabpanel" aria-labelledby="speed-tab">
                       <h3 class="text-white mb-4"><i class="fa-solid fa-gauge-high"></i> Speed Conversion</h3>
@@ -197,8 +206,154 @@
                             <button onclick="convertLen()" class="btn btn-success text-white col-7" >Convert</button>
                         </div>
                     </div>
-                  
                     <!-- LENGTH END -->
+
+                    <!-- WEIGHT START -->
+                    <div class="tab-pane fade text-white" id="pills-Weight" role="tabpanel" aria-labelledby="Weight-tab">
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-weight-scale"></i> Weight Conversion</h3>
+                        <form action="#" >
+                            <div class="row justify-content-center mb-2" >
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="WeightInput" placeholder="Enter a number" >
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="WeightAnswer" placeholder="Result" disabled>
+                                </div>
+                            </div>    
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-6">
+                                    <select name="" id="WeightConversions1" class="form-select">
+                                        <option selected disabled>Weight Unit</option>
+                                        <option>Milligram</option>
+                                        <option>Gram</option>
+                                        <option>Kilogram</option>
+                                        <option>Ounce</option>
+                                        <option>Pound</option>
+                                        <option>Carrrat</option>
+                                        <option>Ton</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-6">
+                                    <select name="" id="WeightConversions2" class="form-select">
+                                        <option selected disabled>Weight Unit</option>
+                                        <option>Milligram</option>
+                                        <option>Gram</option>
+                                        <option>Kilogram</option>
+                                        <option>Ounce</option>
+                                        <option>Pound</option>
+                                        <option>Carrrat</option>
+                                        <option>Ton</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                          <div class="row mt-4 justify-content-end">
+                              <button onclick="clearWeight()" class="btn btn-danger text-white col-7" >Clear</button>
+                          </div>
+                          <div class="row mt-2 justify-content-end">
+                              <button onclick="convertWeight()" class="btn btn-success text-white col-7" >Convert</button>
+                          </div>
+                      </div>
+                    <!-- WEIGHT END -->
+
+                    <!-- TEMPERATURE START -->
+                    <div class="tab-pane fade text-white" id="pills-temp" role="tabpanel" aria-labelledby="temp-tab">
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-temperature-high"></i> Temperature Conversion</h3>
+                        <form action="#" >
+                            <div class="row justify-content-center mb-2" >
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="tempInput" placeholder="Enter a number" >
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="tempAnswer" placeholder="Result" disabled>
+                                </div>
+                            </div>    
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-6">
+                                    <select name="" id="tempConversions1" class="form-select">
+                                        <option selected disabled>Temperature Unit</option>
+                                        <option>Degree Celsius</option>
+                                        <option>Degree Fahrenheit</option>
+                                        <option>Degree Rankine</option>
+                                        <option>Degree Reaumur</option>
+                                        <option>Kelvin</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-6">
+                                    <select name="" id="tempConversions2" class="form-select">
+                                        <option selected disabled>Temperature Unit</option>
+                                        <option>Degree Celsius</option>
+                                        <option>Degree Fahrenheit</option>
+                                        <option>Degree Rankine</option>
+                                        <option>Degree Reaumur</option>
+                                        <option>Kelvin</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                          <div class="row mt-4 justify-content-end">
+                              <button onclick="clearTemp()" class="btn btn-danger text-white col-7" >Clear</button>
+                          </div>
+                          <div class="row mt-2 justify-content-end">
+                              <button onclick="convertTemp()" class="btn btn-success text-white col-7" >Convert</button>
+                          </div>
+                      </div>
+                    <!-- TEMPERATURE END -->
+
+                    <!-- AREA START -->
+                    <div class="tab-pane fade text-white" id="pills-area" role="tabpanel" aria-labelledby="area-tab">
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-chart-area"></i> Area Conversion</h3>
+                        <form action="#" >
+                            <div class="row justify-content-center mb-2" >
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="areaInput" placeholder="Enter a number" >
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control" id="areaAnswer" placeholder="Result" disabled>
+                                </div>
+                            </div>    
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-6">
+                                    <select name="" id="areaConversions1" class="form-select">
+                                        <option selected disabled>Area Unit</option>
+                                        <option>Square Meter</option>
+                                        <option>Square Centimeter</option>
+                                        <option>Square Decimeter</option>
+                                        <option>Square Kilometer</option>
+                                        <option>Hectare</option>
+                                        <option>Square Mile</option>
+                                        <option>Square Yard</option>
+                                        <option>Square Foot</option>
+                                        <option>Acre</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-6">
+                                    <select name="" id="areaConversions2" class="form-select">
+                                        <option selected disabled>Area Unit</option>
+                                        <option>Square Meter</option>
+                                        <option>Square Centimeter</option>
+                                        <option>Square Decimeter</option>
+                                        <option>Square Kilometer</option>
+                                        <option>Hectare</option>
+                                        <option>Square Mile</option>
+                                        <option>Square Yard</option>
+                                        <option>Square Foot</option>
+                                        <option>Acre</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                          <div class="row mt-4 justify-content-end">
+                              <button onclick="clearArea()" class="btn btn-danger text-white col-7" >Clear</button>
+                          </div>
+                          <div class="row mt-2 justify-content-end">
+                              <button onclick="convertArea()" class="btn btn-success text-white col-7" >Convert</button>
+                          </div>
+                      </div>
+                    <!-- AREA END -->
                 </div>
             </div>
         </div> 
