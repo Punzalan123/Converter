@@ -475,3 +475,202 @@ const clearLen = () => {
     document.getElementById("lenInput").value = '';
     document.getElementById("lenAnswer").value = ''; 
 }
+
+const convertWeight = () => {
+    a = document.getElementById('WeightConversions1').value;
+    b = document.getElementById('WeightConversions2').value;
+    WeightInput = document.getElementById('WeightInput').value;
+    c = parseFloat(WeightInput);
+
+    if (!(c > 0)){
+        alert('Please enter a valid number');
+        return c
+    }else if (a == b && !(a == 'Weight Unit' || b == 'Weight Unit')){
+        alert('Units are same');
+        return c
+    }
+
+    // Milligram Start
+    if(a == 'Milligram' && b == 'Gram'){
+        WeightAns = c / 1000
+    } else if(a == 'Milligram' && b == 'Kilogram'){
+        WeightAns = c / 1000000
+    } else if(a == 'Milligram' && b == 'Ounce'){
+        WeightAns = c / 28349.5
+    } else if(a == 'Milligram' && b == 'Pound'){
+        WeightAns = c / 453592
+    } else if(a == 'Milligram' && b == 'Carrat'){
+        WeightAns = c / 200
+    } else if(a == 'Milligram' && b == 'Ton'){
+        WeightAns = c / 1000000000
+    }
+    // Milligram End
+
+    // Gram Start
+    else if(a == 'Gram' && b == 'Milligram'){
+        WeightAns = c * 1000
+    } else if(a == 'Gram' && b == 'Kilogram'){
+        WeightAns = c / 1000
+    } else if(a == 'Gram' && b == 'Ounce'){
+        WeightAns = c / 28.3495
+    } else if(a == 'Gram' && b == 'Pound'){
+        WeightAns = c / 453.592
+    } else if(a == 'Gram' && b == 'Carrat'){
+        WeightAns = c / 0.2
+    } else if(a == 'Gram' && b == 'Ton'){
+        WeightAns = c / 1000000
+    }
+    // Gram End
+
+    // Kilogram Start
+    else if(a == 'Kilogram' && b == 'Milligram'){
+        WeightAns = c * 1000000
+    } else if(a == 'Kilogram' && b == 'Gram'){
+        WeightAns = c * 1000
+    } else if(a == 'Kilogram' && b == 'Ounce'){
+        WeightAns = c * 35.273990723
+    } else if(a == 'Kilogram' && b == 'Pound'){
+        WeightAns = c * 2.2046244202
+    } else if(a == 'Kilogram' && b == 'Carrat'){
+        WeightAns = c * 5000
+    } else if(a == 'Kilogram' && b == 'Ton'){
+        WeightAns = c / 1000
+    }
+    // Kilogram End
+
+    // Ounce Start
+    else if(a == 'Ounce' && b == 'Milligram'){
+        WeightAns = c * 28349.5
+    } else if(a == 'Ounce' && b == 'Gram'){
+        WeightAns = c * 28.3495
+    } else if(a == 'Ounce' && b == 'Kilogram'){
+        WeightAns = c / 35.273990723
+    } else if(a == 'Ounce' && b == 'Pound'){
+        WeightAns = c / 16
+    } else if(a == 'Ounce' && b == 'Carrat'){
+        WeightAns = c * 141.7475
+    } else if(a == 'Ounce' && b == 'Ton'){
+        WeightAns = c / 35273.990723
+    }
+    // Ounce End
+
+    // Pound Start
+    else if(a == 'Pound' && b == 'Milligram'){
+        WeightAns = c * 453592
+    } else if(a == 'Pound' && b == 'Gram'){
+        WeightAns = c * 453.592
+    } else if(a == 'Pound' && b == 'Kilogram'){
+        WeightAns = c * 0.453592
+    } else if(a == 'Pound' && b == 'Ounce'){
+        WeightAns = c * 16
+    } else if(a == 'Pound' && b == 'Carrat'){
+        WeightAns = c * 2267.96
+    } else if(a == 'Pound' && b == 'Ton'){
+        WeightAns = c / 2204.6244202
+    }
+    // Pound End
+
+    // Carrat Start
+    else if(a == 'Carrat' && b == 'Milligram'){
+        WeightAns = c * 200
+    } else if(a == 'Carrat' && b == 'Gram'){
+        WeightAns = c * 0.2
+    } else if(a == 'Carrat' && b == 'Kilogram'){
+        WeightAns = c * 0.0002
+    } else if(a == 'Carrat' && b == 'Ounce'){
+        WeightAns = c / 141.7475
+    } else if(a == 'Carrat' && b == 'Pound'){
+        WeightAns = c / 2267.96
+    } else if(a == 'Carrat' && b == 'Ton'){
+        WeightAns = c / 5000000
+    }
+    // Carrat End
+
+    // Ton Start
+    else if(a == 'Ton' && b == 'Milligram'){
+        WeightAns = c * 1000000000
+    } else if(a == 'Ton' && b == 'Gram'){
+        WeightAns = c * 1000000
+    } else if(a == 'Ton' && b == 'Kilogram'){
+        WeightAns = c * 1000
+    } else if(a == 'Ton' && b == 'Ounce'){
+        WeightAns = c * 35273.990723 
+    } else if(a == 'Ton' && b == 'Pound'){
+        WeightAns = c * 2204.6244202
+    } else if(a == 'Ton' && b == 'Carrat'){
+        WeightAns = c * 5000000
+    }
+    // Ton End
+
+
+    // Invalid inputs start
+    else if(a == 'Weight Unit' || b == 'Weight Unit'){
+        alert('Please input units');
+        return c
+    } else{
+        alert('Invalid Operation');
+        return c
+    }
+    // Invalid inputs end
+    document.getElementById('WeightAnswer').value = WeightAns;
+}
+
+const clearWeight = () => {
+    document.getElementById("WeightInput").value = '';
+    document.getElementById("WeightAnswer").value = ''; 
+}
+
+const convertTemp = () => {
+    a = document.getElementById('tempConversions1').value;
+    b = document.getElementById('tempConversions2').value;
+    tempInput = document.getElementById('tempInput').value;
+    c = parseFloat(tempInput);
+
+    if (!(c > 0)){
+        alert('Please enter a valid number');
+        return c
+    }else if (a == b && !(a == 'Temperature Unit' || b == 'Temperature Unit')){
+        alert('Units are same');
+        return c
+    }
+
+    // Celsius Start
+    if(a == 'Celsius' && b == 'Fahrenheit'){
+        tempAns = c * (9/5) + 32
+    } else if(a == 'Celsius' && b == 'Kelvin'){
+        tempAns = c + 273.15
+    }
+    // Celsius End
+
+    // Fahrenheit Start
+    else if(a == 'Fahrenheit' && b == 'Celsius'){
+        tempAns = (c - 32) * (5/9)
+    } else if(a == 'Fahrenheit' && b == 'Kelvin'){
+        tempAns = (c - 32) * (5/9) + 273.15
+    }
+    // Fahrenheit End
+
+    // Kelvin Start
+    else if(a == 'Kelvin' && b == 'Celsius'){
+        tempAns = c - 273.15
+    } else if(a == 'Kelvin' && b == 'Fahrenheit'){
+        tempAns = 1.8 * (c - 273.15) + 32
+    }
+    // Kelvin End
+    
+    // Invalid inputs start
+    else if(a == 'Temperature Unit' || b == 'Temperature Unit'){
+        alert('Please input units');
+        return c
+    } else{
+        alert('Invalid Operation');
+        return c
+    }
+    // Invalid inputs end
+    document.getElementById('tempAnswer').value = tempAns;
+}
+
+const clearTemp = () => {
+    document.getElementById("tempInput").value = '';
+    document.getElementById("tempAnswer").value = ''; 
+}
