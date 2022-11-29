@@ -635,7 +635,7 @@ const convertTemp = () => {
     }
 
     // Celsius Start
-    if(a == 'Celsius' && b == 'Fahrenheit'){
+    else if(a == 'Celsius' && b == 'Fahrenheit'){
         tempAns = c * (9/5) + 32
     } else if(a == 'Celsius' && b == 'Kelvin'){
         tempAns = c + 273.15
@@ -673,4 +673,148 @@ const convertTemp = () => {
 const clearTemp = () => {
     document.getElementById("tempInput").value = '';
     document.getElementById("tempAnswer").value = ''; 
+}
+
+const convertArea = () => {
+    a = document.getElementById('areaConversions1').value;
+    b = document.getElementById('areaConversions2').value;
+    areaInput = document.getElementById('areaInput').value;
+    c = parseFloat(areaInput);
+
+    if (!(c > 0)){
+        alert('Please enter a valid number');
+        return c
+    }else if (a == b && !(a == 'Area Unit' || b == 'Area Unit')){
+        alert('Units are same');
+        return c
+    }
+
+    // Square Meter Start
+    else if (a == 'Square Meter' && b == 'Square Kilometer'){
+        areaAnswer = c / 1000000
+    } else if (a == 'Square Meter' && b == 'Hectare'){
+        areaAnswer = c / 10000
+    } else if (a == 'Square Meter' && b == 'Square Mile'){
+        areaAnswer = c / 2589990
+    } else if (a == 'Square Meter' && b == 'Square Yard'){
+        areaAnswer = c * 1.1959900463
+    } else if (a == 'Square Meter' && b == 'Square Foot'){
+        areaAnswer = c * 10.763910417
+    } else if (a == 'Square Meter' && b == 'Acre'){
+        areaAnswer = c / 4046.8564224
+    } 
+    // Square Meter End
+
+    // Square Kilometer Start
+    else if (a == 'Square Kilometer' && b == 'Square Meter'){
+        areaAnswer = c * 1000000
+    } else if (a == 'Square Kilometer' && b == 'Hectare'){
+        areaAnswer = c * 100
+    } else if (a == 'Square Kilometer' && b == 'Square Mile'){
+        areaAnswer = c / 2.58999
+    } else if (a == 'Square Kilometer' && b == 'Square Yard'){
+        areaAnswer = c * 1195990.0463
+    } else if (a == 'Square Kilometer' && b == 'Square Foot'){
+        areaAnswer = c * 10763910.417
+    } else if (a == 'Square Kilometer' && b == 'Acre'){
+        areaAnswer = c * 247.10538147
+    } 
+    // Square Kilometer End
+
+    // Hectare Start
+    else if (a == 'Hectare' && b == 'Square Meter'){
+        areaAnswer = c * 10000
+    } else if (a == 'Hectare' && b == 'Square Kilometer'){
+        areaAnswer = c / 100
+    } else if (a == 'Hectare' && b == 'Square Mile'){
+        areaAnswer = c / 258.999
+    } else if (a == 'Hectare' && b == 'Square Yard'){
+        areaAnswer = c * 11959.900463
+    } else if (a == 'Hectare' && b == 'Square Foot'){
+        areaAnswer = c * 107639.10417
+    } else if (a == 'Hectare' && b == 'Acre'){
+        areaAnswer = c * 2.4710538147
+    } 
+    // Hectare End
+
+    // Square Mile Start
+    else if (a == 'Square Mile' && b == 'Square Meter'){
+        areaAnswer = c * 2589990
+    } else if (a == 'Square Mile' && b == 'Square Kilometer'){
+        areaAnswer = c * 2.58999
+    } else if (a == 'Square Mile' && b == 'Hectare'){
+        areaAnswer = c * 258.999
+    } else if (a == 'Square Mile' && b == 'Square Yard'){
+        areaAnswer = c * 3097602.26
+    } else if (a == 'Square Mile' && b == 'Square Foot'){
+        areaAnswer = c * 27878420.34
+    } else if (a == 'Square Mile' && b == 'Acre'){
+        areaAnswer = c * 640.00046695
+    } 
+    // Square Mile End
+
+    // Square Yard Start
+    else if (a == 'Square Yard' && b == 'Square Meter'){
+        areaAnswer = c / 1.1959900463
+    } else if (a == 'Square Yard' && b == 'Square Kilometer'){
+        areaAnswer = c / 1195990.0463
+    } else if (a == 'Square Yard' && b == 'Hectare'){
+        areaAnswer = c / 11959.900463
+    } else if (a == 'Square Yard' && b == 'Square Mile'){
+        areaAnswer = c / 3097602.26
+    } else if (a == 'Square Yard' && b == 'Square Foot'){
+        areaAnswer = c * 9
+    } else if (a == 'Square Yard' && b == 'Acre'){
+        areaAnswer = c / 4840
+    } 
+    // Square Yard End
+
+    // Square Foot Start
+    else if (a == 'Square Foot' && b == 'Square Meter'){
+        areaAnswer = c / 10.763910417
+    } else if (a == 'Square Foot' && b == 'Square Kilometer'){
+        areaAnswer = c / 10763910.417
+    } else if (a == 'Square Foot' && b == 'Hectare'){
+        areaAnswer = c / 107639.10417
+    } else if (a == 'Square Foot' && b == 'Square Mile'){
+        areaAnswer = c / 27878420.34
+    } else if (a == 'Square Foot' && b == 'Square Yard'){
+        areaAnswer = c / 9
+    } else if (a == 'Square Foot' && b == 'Acre'){
+        areaAnswer = c / 43560
+    } 
+    // Square Foot End
+
+    // Acre Start
+    else if (a == 'Acre' && b == 'Square Meter'){
+        areaAnswer = c * 4046.8564224
+    } else if (a == 'Acre' && b == 'Square Kilometer'){
+        areaAnswer = c / 247.10538147
+    } else if (a == 'Acre' && b == 'Hectare'){
+        areaAnswer = c / 2.4710538147
+    } else if (a == 'Acre' && b == 'Square Mile'){
+        areaAnswer = c / 640.00046695
+    } else if (a == 'Acre' && b == 'Square Yard'){
+        areaAnswer = c * 4840
+    } else if (a == 'Acre' && b == 'Square Foot'){
+        areaAnswer = c * 43560
+    } 
+    // Acre End
+
+    // Invalid inputs start
+    else if(a == 'Area Unit' || b == 'Area Unit'){
+        alert('Please input units');
+        return c
+    } else{
+        alert('Invalid Operation');
+        return c
+    }
+    // Invalid inputs end
+
+    document.getElementById('areaAnswer').value = areaAnswer;
+}
+
+const clearArea = () => {
+    document.getElementById("areaInput").value = '';
+    document.getElementById("areaAnswer").value = ''; 
 }

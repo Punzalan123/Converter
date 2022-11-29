@@ -16,6 +16,9 @@ body{
     width: 100%;
     min-height: 100vh;
     background-image: linear-gradient(to top right, #0014FF, #009EFF, rgb(0, 231, 255));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     opacity: 0.5;
     position: absolute;
 }
