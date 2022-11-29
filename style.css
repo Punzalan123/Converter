@@ -36,10 +36,9 @@ body{
     padding: 50px 0;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    border-radius: 30px ;
+    align-items: center;
+    border-radius: 5px ;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 }
 .navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus{
     box-shadow: none;
@@ -47,6 +46,10 @@ body{
     transition: 0.1s ease;
     color: whitesmoke;
     border: none;
+}
+
+.navbar-toggler{
+    margin: 10px 10px 10px 0;
 }
 
 .btn, .btn:active, .btn:focus{
