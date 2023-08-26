@@ -1,355 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/02c032f7e0.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/02c032f7e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
     <title>Unit Converter</title>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
 
     <div id="sharp">
-        <!-- Speed -->
+      <!-- Speed -->
     </div>
-    
-        <div class="container" id="box" >
-            <div class="col-11 col-sm-11 col-md-8 col-lg-7 col-xl-7" id="con">
-                <h2 class="h2 text-white"><i class="fa-solid fa-scale-unbalanced"></i> Unit Converter</h2>
-                <nav class="navbar navbar-expand-xxl w-100">
-                    <div class="container-fluid">
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa-solid fa-bars"></i>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav nav-pills mb-3 px-5" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="speed-tab" data-bs-toggle="pill" data-bs-target="#pills-speed" type="button" role="tab" aria-controls="pills-speed" aria-selected="true">Speed</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="time-tab" data-bs-toggle="pill" data-bs-target="#pills-time" type="button" role="tab" aria-controls="pills-time" aria-selected="false">Time</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="len-tab" data-bs-toggle="pill" data-bs-target="#pills-len" type="button" role="tab" aria-controls="pills-len" aria-selected="false">Length</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="Weight-tab" data-bs-toggle="pill" data-bs-target="#pills-Weight" type="button" role="tab" aria-controls="pills-Weight" aria-selected="false">Weight</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="temp-tab" data-bs-toggle="pill" data-bs-target="#pills-temp" type="button" role="tab" aria-controls="pills-temp" aria-selected="false">Temp</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="area-tab" data-bs-toggle="pill" data-bs-target="#pills-area" type="button" role="tab" aria-controls="pills-area" aria-selected="false">Area</button>
-                            </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
 
-                <!---->
-                
-                  
-                  <div class="tab-content col-xl-10 col-lg-11 col-md-10 col-sm-10 col-xs-12 px-2 " id="pills-tabContent">
-                    <!-- SPEED START -->
-                    <div class="tab-pane fade show active" id="pills-speed" role="tabpanel" aria-labelledby="speed-tab">
-                      <h3 class="text-white mb-4"><i class="fa-solid fa-gauge-high"></i> Speed Conversion</h3>
-                      <form action="#" >
-                          <div class="row justify-content-center mb-2" >
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="inp" placeholder="Enter a number" >
-                              </div>
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="answer" placeholder="Result" disabled>
-                              </div>
-                          </div>
-                          <div class="row justify-content-center mb-3">
-                              <div class="col-6">
-                                  <select name="" id="conversions1" class="form-select">
-                                    <option selected disabled>Speed Unit</option>
-                                    <option>Kilometer/hour</option>
-                                    <option>Mile/hour</option>
-                                    <option>Kilometer/second</option>
-                                    <option>Inch/second</option>
-                                    <option>Mach</option>
-                                  </select>
-                              </div>
-                              
-                              <div class="col-6">
-                                  <select name="" id="conversions2" class="form-select">
-                                    <option selected disabled>Speed Unit</option>
-                                    <option>Kilometer/hour</option>
-                                    <option>Mile/hour</option>
-                                    <option>Kilometer/second</option>
-                                    <option>Inch/second</option>
-                                    <option>Mach</option>
-                                  </select>
-                              </div>
-                          </div>
-                      </form>
-                        <div class="row mt-4 justify-content-end">
-                            <button onclick="clearSpeed()" class="btn btn-danger text-white col-7 me-3" >Clear</button>
-                        </div>
-                        <div class="row mt-2 justify-content-end">
-                            <button onclick="convertspeed()" class="btn btn-success text-white col-7 me-3" >Convert</button>
-                        </div>
-                    </div>
-
-
-                    <!-- SPEED END -->
-
-                    <!-- TIME START -->
-                    <div class="tab-pane fade" id="pills-time" role="tabpanel" aria-labelledby="time-tab">
-                      <h3 class="text-white mb-4"><i class="fa-solid fa-clock"></i> Time Conversion</h3>
-                      <form action="#" >
-                          <div class="row justify-content-center mb-2" >
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="timeInput" placeholder="Enter a number" >
-                              </div>
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="timeAnswer" placeholder="Result" disabled>
-                              </div>
-                          </div>
-                          <div class="row justify-content-center mb-3">
-                              <div class="col-6">
-                                  <select name="" id="timeConversions1" class="form-select">
-                                      <option selected disabled>Time Unit</option>
-                                      <option>Millisecond</option>
-                                      <option>Second</option>
-                                      <option>Minute</option>
-                                      <option>Hour</option>
-                                      <option>Day</option>
-                                      <option>Week</option>
-                                      <option>Month</option>
-                                      <option>Year</option>
-                                  </select>
-                              </div>
-                              
-                              <div class="col-6">
-                                  <select name="" id="timeConversions2" class="form-select">
-                                      <option selected disabled>Time Unit</option>
-                                      <option>Millisecond</option>
-                                      <option>Second</option>
-                                      <option>Minute</option>
-                                      <option>Hour</option>
-                                      <option>Day</option>
-                                      <option>Week</option>
-                                      <option>Month</option>
-                                      <option>Year</option>
-                                  </select>
-                              </div>
-                          </div>
-                      </form>
-                        <div class="row mt-4 justify-content-end">
-                            <button onclick="clearTime()" class="btn btn-danger text-white col-7 me-3" >Clear</button>
-                        </div>
-                        <div class="row mt-2 justify-content-end">
-                            <button onclick="convertTime()" class="btn btn-success text-white col-7 me-3" >Convert</button>
-                        </div>
-                    </div>
-                    <!-- TIME END -->
-
-
-                    <!-- LENGTH START -->
-                     
-                    <div class="tab-pane fade text-white" id="pills-len" role="tabpanel" aria-labelledby="len-tab">
-                      <h3 class="text-white mb-4"><i class="fa-solid fa-ruler"></i> Length Conversion</h3>
-                      <form action="#" >
-                          <div class="row justify-content-center mb-2" >
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="lenInput" placeholder="Enter a number" >
-                              </div>
-                              <div class="col-6">
-                                  <input type="number" class="form-control" id="lenAnswer" placeholder="Result" disabled>
-                              </div>
-                          </div>    
-                          <div class="row justify-content-center mb-3">
-                              <div class="col-6">
-                                  <select name="" id="lenConversions1" class="form-select">
-                                      <option selected disabled>Length Unit</option>
-                                      <option>Millimeter</option>
-                                      <option>Centimeter</option>
-                                      <option>Decimeter</option>
-                                      <option>Meter</option>
-                                      <option>Kilometer</option>
-                                      <option>Inch</option>
-                                      <option>Foot</option>
-                                      <option>Yard</option>
-                                      <option>Mile</option>
-                                  </select>
-                              </div>
-                              
-                              <div class="col-6">
-                                  <select name="" id="lenConversions2" class="form-select">
-                                      <option selected disabled>Length Unit</option>
-                                      <option>Millimeter</option>
-                                      <option>Centimeter</option>
-                                      <option>Decimeter</option>
-                                      <option>Meter</option>
-                                      <option>Kilometer</option>
-                                      <option>Inch</option>
-                                      <option>Foot</option>
-                                      <option>Yard</option>
-                                      <option>Mile</option>
-                                  </select>
-                              </div>
-                          </div>
-                      </form>
-                        <div class="row mt-4 justify-content-end">
-                            <button onclick="clearLen()" class="btn btn-danger text-white col-7 me-3" >Clear</button>
-                        </div>
-                        <div class="row mt-2 justify-content-end">
-                            <button onclick="convertLen()" class="btn btn-success text-white col-7 me-3" >Convert</button>
-                        </div>
-                    </div>
-                    <!-- LENGTH END -->
-
-                    <!-- WEIGHT START -->
-                    <div class="tab-pane fade text-white" id="pills-Weight" role="tabpanel" aria-labelledby="Weight-tab">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-weight-scale"></i> Weight Conversion</h3>
-                        <form action="#" >
-                            <div class="row justify-content-center mb-2" >
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="WeightInput" placeholder="Enter a number" >
-                                </div>
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="WeightAnswer" placeholder="Result" disabled>
-                                </div>
-                            </div>    
-                            <div class="row justify-content-center mb-3">
-                                <div class="col-6">
-                                    <select name="" id="WeightConversions1" class="form-select">
-                                        <option selected disabled>Weight Unit</option>
-                                        <option>Milligram</option>
-                                        <option>Gram</option>
-                                        <option>Kilogram</option>
-                                        <option>Ounce</option>
-                                        <option>Pound</option>
-                                        <option>Carrat</option>
-                                        <option>Ton</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-6">
-                                    <select name="" id="WeightConversions2" class="form-select">
-                                        <option selected disabled>Weight Unit</option>
-                                        <option>Milligram</option>
-                                        <option>Gram</option>
-                                        <option>Kilogram</option>
-                                        <option>Ounce</option>
-                                        <option>Pound</option>
-                                        <option>Carrat</option>
-                                        <option>Ton</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                          <div class="row mt-4 justify-content-end">
-                              <button onclick="clearWeight()" class="btn btn-danger text-white col-7 me-3" >Clear</button>
-                          </div>
-                          <div class="row mt-2 justify-content-end">
-                              <button onclick="convertWeight()" class="btn btn-success text-white col-7 me-3" >Convert</button>
-                          </div>
-                      </div>
-                    <!-- WEIGHT END -->
-
-                    <!-- TEMPERATURE START -->
-                    <div class="tab-pane fade text-white" id="pills-temp" role="tabpanel" aria-labelledby="temp-tab">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-temperature-high"></i> Temperature Conversion</h3>
-                        <form action="#" >
-                            <div class="row justify-content-center mb-2" >
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="tempInput" placeholder="Enter a number" >
-                                </div>
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="tempAnswer" placeholder="Result" disabled>
-                                </div>
-                            </div>    
-                            <div class="row justify-content-center mb-3">
-                                <div class="col-6">
-                                    <select id="tempConversions1" class="form-select">
-                                        <option selected disabled>Temperature Unit</option>
-                                        <option>Celsius</option>
-                                        <option>Fahrenheit</option>
-                                        <option>Kelvin</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-6">
-                                    <select id="tempConversions2" class="form-select">
-                                        <option selected disabled>Temperature Unit</option>
-                                        <option>Celsius</option>
-                                        <option>Fahrenheit</option>
-                                        <option>Kelvin</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                          <div class="row mt-4 justify-content-end">
-                              <button onclick="clearTemp()" class="btn btn-danger text-white col-7 me-3" >Clear</button>
-                          </div>
-                          <div class="row mt-2 justify-content-end">
-                              <button onclick="convertTemp()" class="btn btn-success text-white col-7 me-3" >Convert</button>
-                          </div>
-                      </div>
-                    <!-- TEMPERATURE END -->
-
-                    <!-- AREA START -->
-                    <div class="tab-pane fade text-white" id="pills-area" role="tabpanel" aria-labelledby="area-tab">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-chart-area"></i> Area Conversion</h3>
-                        <form action="#" >
-                            <div class="row justify-content-center mb-2" >
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="areaInput" placeholder="Enter a number" >
-                                </div>
-                                <div class="col-6">
-                                    <input type="number" class="form-control" id="areaAnswer" placeholder="Result" disabled>
-                                </div>
-                            </div>    
-                            <div class="row justify-content-center mb-3">
-                                <div class="col-6">
-                                    <select name="" id="areaConversions1" class="form-select">
-                                        <option selected disabled>Area Unit</option>
-                                        <option>Square Meter</option>
-                                        <option>Square Kilometer</option>
-                                        <option>Hectare</option>
-                                        <option>Square Mile</option>
-                                        <option>Square Yard</option>
-                                        <option>Square Foot</option>
-                                        <option>Acre</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-6">
-                                    <select name="" id="areaConversions2" class="form-select">
-                                        <option selected disabled>Area Unit</option>
-                                        <option>Square Meter</option>
-                                        <option>Square Kilometer</option>
-                                        <option>Hectare</option>
-                                        <option>Square Mile</option>
-                                        <option>Square Yard</option>
-                                        <option>Square Foot</option>
-                                        <option>Acre</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                          <div class="row mt-4 justify-content-end">
-                              <button onclick="clearArea()" class="btn btn-danger text-white col-7 me-3" >Clear</button>
-                          </div>
-                          <div class="row mt-2 justify-content-end">
-                              <button onclick="convertArea()" class="btn btn-success text-white col-7 me-3" >Convert</button>
-                          </div>
-                      </div>
-                    <!-- AREA END -->
-                </div>
+    <div class="container" id="box">
+      <div class="col-11 col-sm-11 col-md-8 col-lg-7 col-xl-7" id="con">
+        <h2 class="h2 text-white">
+          <i class="fa-solid fa-scale-unbalanced"></i> Unit Converter
+        </h2>
+        <nav class="navbar navbar-expand-xxl w-100">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul
+                class="navbar-nav nav-pills mb-3 px-5"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="speed-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-speed"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-speed"
+                    aria-selected="true"
+                  >
+                    Speed
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="time-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-time"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-time"
+                    aria-selected="false"
+                  >
+                    Time
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="len-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-len"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-len"
+                    aria-selected="false"
+                  >
+                    Length
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="Weight-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-Weight"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-Weight"
+                    aria-selected="false"
+                  >
+                    Weight
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="temp-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-temp"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-temp"
+                    aria-selected="false"
+                  >
+                    Temp
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="area-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-area"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-area"
+                    aria-selected="false"
+                  >
+                    Area
+                  </button>
+                </li>
+              </ul>
             </div>
-        </div> 
+          </div>
+        </nav>
+
+        <!---->
+
+        <div
+          class="tab-content col-xl-10 col-lg-11 col-md-10 col-sm-10 col-xs-12 px-2"
+          id="pills-tabContent"
+        >
+          <!-- SPEED START -->
+          <div
+            class="tab-pane fade show active"
+            id="pills-speed"
+            role="tabpanel"
+            aria-labelledby="speed-tab"
+          >
+            <h3 class="text-white mb-4 text-center">
+              <i class="fa-solid fa-gauge-high"></i> Speed Conversion
+            </h3>
+            <form action="#">
+              <div class="row justify-content-center mb-2">
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="inp"
+                    placeholder="Enter a number"
+                  />
+                </div>
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="answer"
+                    placeholder="Result"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-5 col-sm-6">
+                  <select name="" id="conversions1" class="form-select">
+                    <option selected disabled>Speed Unit</option>
+                    <option>Kilometer/hour</option>
+                    <option>Mile/hour</option>
+                    <option>Kilometer/second</option>
+                    <option>Inch/second</option>
+                    <option>Mach</option>
+                  </select>
+                </div>
+
+                <div class="col-5 col-sm-6">
+                  <select name="" id="conversions2" class="form-select">
+                    <option selected disabled>Speed Unit</option>
+                    <option>Kilometer/hour</option>
+                    <option>Mile/hour</option>
+                    <option>Kilometer/second</option>
+                    <option>Inch/second</option>
+                    <option>Mach</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-4 justify-content-end">
+              <button
+                onclick="clearSpeed()"
+                class="btn btn-danger text-white col-7 me-3"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="row mt-2 justify-content-end">
+              <button
+                onclick="convertspeed()"
+                class="btn btn-success text-white col-7 me-3"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+
+          <!-- SPEED END -->
+
+          <!-- TIME START -->
+          <div
+            class="tab-pane fade"
+            id="pills-time"
+            role="tabpanel"
+            aria-labelledby="time-tab"
+          >
+            <h3 class="text-white mb-4 text-center">
+              <i class="fa-solid fa-clock"></i> Time Conversion
+            </h3>
+            <form action="#">
+              <div class="row justify-content-center mb-2">
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="timeInput"
+                    placeholder="Enter a number"
+                  />
+                </div>
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="timeAnswer"
+                    placeholder="Result"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-5 col-sm-6">
+                  <select name="" id="timeConversions1" class="form-select">
+                    <option selected disabled>Time Unit</option>
+                    <option>Millisecond</option>
+                    <option>Second</option>
+                    <option>Minute</option>
+                    <option>Hour</option>
+                    <option>Day</option>
+                    <option>Week</option>
+                    <option>Month</option>
+                    <option>Year</option>
+                  </select>
+                </div>
+
+                <div class="col-5 col-sm-6">
+                  <select name="" id="timeConversions2" class="form-select">
+                    <option selected disabled>Time Unit</option>
+                    <option>Millisecond</option>
+                    <option>Second</option>
+                    <option>Minute</option>
+                    <option>Hour</option>
+                    <option>Day</option>
+                    <option>Week</option>
+                    <option>Month</option>
+                    <option>Year</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-4 justify-content-end">
+              <button
+                onclick="clearTime()"
+                class="btn btn-danger text-white col-7 me-3"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="row mt-2 justify-content-end">
+              <button
+                onclick="convertTime()"
+                class="btn btn-success text-white col-7 me-3"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+          <!-- TIME END -->
+
+          <!-- LENGTH START -->
+
+          <div
+            class="tab-pane fade text-white"
+            id="pills-len"
+            role="tabpanel"
+            aria-labelledby="len-tab"
+          >
+            <h3 class="text-white mb-4 text-center">
+              <i class="fa-solid fa-ruler"></i> Length Conversion
+            </h3>
+            <form action="#">
+              <div class="row justify-content-center mb-2">
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="lenInput"
+                    placeholder="Enter a number"
+                  />
+                </div>
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="lenAnswer"
+                    placeholder="Result"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-5 col-sm-6">
+                  <select name="" id="lenConversions1" class="form-select">
+                    <option selected disabled>Length Unit</option>
+                    <option>Millimeter</option>
+                    <option>Centimeter</option>
+                    <option>Decimeter</option>
+                    <option>Meter</option>
+                    <option>Kilometer</option>
+                    <option>Inch</option>
+                    <option>Foot</option>
+                    <option>Yard</option>
+                    <option>Mile</option>
+                  </select>
+                </div>
+
+                <div class="col-5 col-sm-6">
+                  <select name="" id="lenConversions2" class="form-select">
+                    <option selected disabled>Length Unit</option>
+                    <option>Millimeter</option>
+                    <option>Centimeter</option>
+                    <option>Decimeter</option>
+                    <option>Meter</option>
+                    <option>Kilometer</option>
+                    <option>Inch</option>
+                    <option>Foot</option>
+                    <option>Yard</option>
+                    <option>Mile</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-4 justify-content-end">
+              <button
+                onclick="clearLen()"
+                class="btn btn-danger text-white col-7 me-3"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="row mt-2 justify-content-end">
+              <button
+                onclick="convertLen()"
+                class="btn btn-success text-white col-7 me-3"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+          <!-- LENGTH END -->
+
+          <!-- WEIGHT START -->
+          <div
+            class="tab-pane fade text-white"
+            id="pills-Weight"
+            role="tabpanel"
+            aria-labelledby="Weight-tab"
+          >
+            <h3 class="text-white mb-4 text-center">
+              <i class="fa-solid fa-weight-scale"></i> Weight Conversion
+            </h3>
+            <form action="#">
+              <div class="row justify-content-center mb-2">
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="WeightInput"
+                    placeholder="Enter a number"
+                  />
+                </div>
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="WeightAnswer"
+                    placeholder="Result"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-5 col-sm-6">
+                  <select name="" id="WeightConversions1" class="form-select">
+                    <option selected disabled>Weight Unit</option>
+                    <option>Milligram</option>
+                    <option>Gram</option>
+                    <option>Kilogram</option>
+                    <option>Ounce</option>
+                    <option>Pound</option>
+                    <option>Carrat</option>
+                    <option>Ton</option>
+                  </select>
+                </div>
+
+                <div class="col-5 col-sm-6">
+                  <select name="" id="WeightConversions2" class="form-select">
+                    <option selected disabled>Weight Unit</option>
+                    <option>Milligram</option>
+                    <option>Gram</option>
+                    <option>Kilogram</option>
+                    <option>Ounce</option>
+                    <option>Pound</option>
+                    <option>Carrat</option>
+                    <option>Ton</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-4 justify-content-end">
+              <button
+                onclick="clearWeight()"
+                class="btn btn-danger text-white col-7 me-3"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="row mt-2 justify-content-end">
+              <button
+                onclick="convertWeight()"
+                class="btn btn-success text-white col-7 me-3"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+          <!-- WEIGHT END -->
+
+          <!-- TEMPERATURE START -->
+          <div
+            class="tab-pane fade text-white"
+            id="pills-temp"
+            role="tabpanel"
+            aria-labelledby="temp-tab"
+          >
+            <h3 class="text-white mb-4 text-center">
+              <i class="fa-solid fa-temperature-high"></i> Temperature
+              Conversion
+            </h3>
+            <form action="#">
+              <div class="row justify-content-center mb-2">
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tempInput"
+                    placeholder="Enter a number"
+                  />
+                </div>
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tempAnswer"
+                    placeholder="Result"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-5 col-sm-6">
+                  <select id="tempConversions1" class="form-select">
+                    <option selected disabled>Temperature Unit</option>
+                    <option>Celsius</option>
+                    <option>Fahrenheit</option>
+                    <option>Kelvin</option>
+                  </select>
+                </div>
+
+                <div class="col-5 col-sm-6">
+                  <select id="tempConversions2" class="form-select">
+                    <option selected disabled>Temperature Unit</option>
+                    <option>Celsius</option>
+                    <option>Fahrenheit</option>
+                    <option>Kelvin</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-4 justify-content-end">
+              <button
+                onclick="clearTemp()"
+                class="btn btn-danger text-white col-7 me-3"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="row mt-2 justify-content-end">
+              <button
+                onclick="convertTemp()"
+                class="btn btn-success text-white col-7 me-3"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+          <!-- TEMPERATURE END -->
+
+          <!-- AREA START -->
+          <div
+            class="tab-pane fade text-white"
+            id="pills-area"
+            role="tabpanel"
+            aria-labelledby="area-tab"
+          >
+            <h3 class="text-white mb-4 text-center">
+              <i class="fa-solid fa-chart-area"></i> Area Conversion
+            </h3>
+            <form action="#">
+              <div class="row justify-content-center mb-2">
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="areaInput"
+                    placeholder="Enter a number"
+                  />
+                </div>
+                <div class="col-5 col-sm-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="areaAnswer"
+                    placeholder="Result"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-5 col-sm-6">
+                  <select name="" id="areaConversions1" class="form-select">
+                    <option selected disabled>Area Unit</option>
+                    <option>Square Meter</option>
+                    <option>Square Kilometer</option>
+                    <option>Hectare</option>
+                    <option>Square Mile</option>
+                    <option>Square Yard</option>
+                    <option>Square Foot</option>
+                    <option>Acre</option>
+                  </select>
+                </div>
+
+                <div class="col-5 col-sm-6">
+                  <select name="" id="areaConversions2" class="form-select">
+                    <option selected disabled>Area Unit</option>
+                    <option>Square Meter</option>
+                    <option>Square Kilometer</option>
+                    <option>Hectare</option>
+                    <option>Square Mile</option>
+                    <option>Square Yard</option>
+                    <option>Square Foot</option>
+                    <option>Acre</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-4 justify-content-end">
+              <button
+                onclick="clearArea()"
+                class="btn btn-danger text-white col-7 me-3"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="row mt-2 justify-content-end">
+              <button
+                onclick="convertArea()"
+                class="btn btn-success text-white col-7 me-3"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+          <!-- AREA END -->
+        </div>
+      </div>
+    </div>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
